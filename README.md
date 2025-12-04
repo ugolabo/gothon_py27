@@ -13,9 +13,7 @@ Then...
 
 | web.py (English/français) |
 |:---:|
-|   |
-
-<img src="img/webpy_py311.gif" width=50% alt=""/>
+| <img src="img/webpy_py311.gif" width=50% alt=""/> |
 </center>
 
 ## Project Setup and Structure
