@@ -1,4 +1,4 @@
-# gothon
+# gothon with Python 2.7
 
 This interactive story (7-min read), built in Python 2.7, serves as a proof of concept for a separate project: web.py with Python 3.11 (available in repo: **webpy_py311**). Conceived after an in-depth review of a prior edition of "<a href="https://learnpythonthehardway.org/" target="_blank">Learn Python the Hard Way</a>" (Exercise 43 with additional bells and whistles), this initial project has a dual purpose. First, it is used to test various deployment solutions -- such as virtual environments, standalone packages and containers -- that ensure a project runs reliably with specific versions of the Python interpreter and modules. Second, these tested solutions serve as documented methods for reproducing or reimplementing the project on different operating systems.
 
