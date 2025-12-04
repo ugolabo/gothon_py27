@@ -1,40 +1,61 @@
-# gothon_project
+# gothon
 
-A little python app.
+This interactive story (7-min read), built in Python 2.7, serves as a proof of concept for a separate project: web.py with Python 3.11 (available in repo: **webpy_py311**). Conceived after an in-depth review of a prior edition of "<a href="https://learnpythonthehardway.org/" target="_blank">Learn Python the Hard Way</a>" (Exercise 43 with additional bells and whistles), this initial project has a dual purpose. First, it is used to test various deployment solutions -- such as virtual environments, standalone packages and containers -- that ensure a project runs reliably with specific versions of the Python interpreter and modules. Second, these tested solutions serve as documented methods for reproducing or reimplementing the project on different operating systems.
 
-*Download the app (see [Use](#use), below).*
+<center>
+First...
 
-Based on Exercise 43, from [Learn Python the Hard Way](http://learnpythonthehardway.org) by Zed Shaw, with a couple of bells and whistles. First, the same app runs in either French or English. Second, we added a final interactive fight. Interactive it is as the rest of the story. A tiny story that can be completed in a few minutes, after some trials and errors. Because an error leads to a fatal epilogue... With a little patience, anyone can successfully complete the story. Although there are some code-breaking challenges, since this is a proof-of-concept, we provide the keys. However, anyone can choose to test the game. 
+| gothon (English) | gothon (français) |
+|:---:|:---:|
+| <img src="img/gothon_e.gif" alt=""/>  | <img src="img/gothon_f.gif" alt=""/>  |
 
-## Clone
+Then...
 
-- Project name: gothon_project (the parent directory).
-- The project runs on Python 2.7. It could easily be migrated to Python 3.
-- Clone the project; on your PC, the project directory must be organized as follow.
+| web.py (English/français) |
+|:---:|
+|   |
+
+<img src="img/webpy_py311.gif" width=50% alt=""/>
+</center>
+
+## Project Setup and Structure
+
+To run this interactive story locally, please ensure your environment meets the following requirements:
+
+- Clone the Repository: Begin by cloning the project files to your machine.
+- Environment: The application is designed for Python 2.7.
+Dependencies: Only standard modules that come with the Python interpreter. No independant modules needed.
+
+### Directory Layout
+
+The project utilizes a clear structure to separate the engine and story logic.
 
 ```text
-└───gothon_project
+────gothon
     ├───bin
     └───gothonmap
 ```
 
-- The 'bin' subdir contains the script `engine.py`. The engine refers to a map or story, in the 'gothonmap' subdir to generate an interactive story. The 'tests' subdir is for testing the scripts.
-- In your terminal, at the 'gothon_project' level, launch the app with `python2 bin/engine.py`.
-- If the Python script fails to launch the website, you might have a path problem; you must set the path for the project to execute.
-- For Linux/Mac OS X users, please execute in the terminal:
+Function: The core application engine ('bin/engine.py') retrieves the narrative data from 'gothonmap/map.py', dynamically renders it.
 
-```bash
-export PYTHONPATH=$PYTHONPATH:.
-```
+## Running the Application
 
-- For Windows users, please execute in the shell:
+To launch the web application, follow these simple steps:
 
-```bash
-$env:PYTHONPATH = "$env:PYTHONPATH;."
-```
+- Navigate: Ensure your terminal is at the root directory of the project (gothon/).
+Execute: Run the main application file using your Python executable: python bin/engine.py
+    - Note: Depending on your OS setup, you may need to use `py -2 bin/app.py` or `python2 bin/app.py`.
+- Access: The interactive story will begin in your terminal. Enter your choices at the command prompt to proceed.
 
-- Or set the path with Windows Advanced Systeme Parameters (consult the documentation for that matter).
-- Then relaunch the script; `python2 bin/engine.py` works on Linux/MacOSX.
-- For Windows, you might need to try `py -2 bin/engine.py` or `py -2.7 bin/engine.py`.
-- Consult the Python documentation otherwise.
-- Have fun!
+### Troubleshooting: PYTHONPATH Errors
+
+If the Python script fails to launch or reports that it cannot find modules (like `gothonmap`), you likely have a `PYTHONPATH` issue. The interpreter needs to be told where to look for the project's internal libraries.
+
+Execute the appropriate command below in your terminal before you run python `bin/engine.py` again:
+
+- For Linux/macOS: `export PYTHONPATH=$PYTHONPATH:.`
+- For Windows (PowerShell): `$env:PYTHONPATH = "$env:PYTHONPATH;."`
+
+Have fun!
+
+For detailed information on the Project's Origins and Modernization efforts, as well as the underlying Concept of Interactive Stories, please refer to the main repository: **webpy_py311**.
