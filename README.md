@@ -20,8 +20,8 @@ Then...
 
 To run this interactive story locally, please ensure your environment meets the following requirements:
 
-- Clone the Repository: Begin by cloning the project files to your machine.
-- Environment: The application is designed for Python 2.7.
+1. Clone the Repository: Begin by cloning the project files to your machine.
+1. Environment: The application is designed for Python 2.7.
 Dependencies: Only standard modules that come with the Python interpreter. No independant modules needed.
 
 ### Directory Layout
@@ -40,10 +40,10 @@ Function: The core application engine ('bin/engine.py') retrieves the narrative 
 
 To launch the web application, follow these simple steps:
 
-- Navigate: Ensure your terminal is at the root directory of the project (gothon/).
-Execute: Run the main application file using your Python executable: python bin/engine.py
+1. Navigate: Ensure your terminal is at the root directory of the project (gothon/).
+1. Execute: Run the main application file using your Python executable: python bin/engine.py
     - Note: Depending on your OS setup, you may need to use `py -2 bin/app.py` or `python2 bin/app.py`.
-- Access: The interactive story will begin in your terminal. Enter your choices at the command prompt to proceed.
+1. Access: The interactive story will begin in your terminal. Enter your choices at the command prompt to proceed.
 
 ### Troubleshooting: PYTHONPATH Errors
 
